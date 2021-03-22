@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Проверка авторизации" parallel="none" verbose="10">
+    <test name="Проверка авторизации с верными данными">
+        <parameter name="user" value="tester"></parameter>
+        <parameter name="pass" value="K35G3U"></parameter>
+        <classes>
+            <class name="checkLoginPage"/>
+        </classes>
+    </test>
+
+    <test name="Проверка авторизации с неверными данными" annotations="Негативный тест">
+        <parameter name="user" value="123456789"></parameter>
+        <parameter name="pass" value="987654321"></parameter>
+        <classes>
+            <class name="checkLoginPage"/>
+        </classes>
+    </test>
+
+    <test name="Проверка авторизации с верными данными и запоминанием пользователя" annotations="">
+        <parameter name="user" value="tester"></parameter>
+        <parameter name="pass" value="K35G3U"></parameter>
+        <classes>
+            <class name="checkAuthorizationWithRemember"/>
+        </classes>
+    </test>
+
+    <test name="Проверка авторизации с доменной УЗ">
+        <parameter name="user" value="tester"></parameter>
+        <parameter name="pass" value="K35G3U"></parameter>
+        <classes>
+            <class name="checkAuthorizationDomain"/>
+        </classes>
+    </test>
+
+    <test name="Проверка авторизации с текущей УЗ">
+        <parameter name="user" value="tester"></parameter>
+        <parameter name="pass" value="K35G3U"></parameter>
+        <classes>
+            <class name="checkAuthorizationCurrent"/>
+        </classes>
+    </test>
+</suite>
