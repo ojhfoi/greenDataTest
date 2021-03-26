@@ -16,7 +16,6 @@ public class checkAuthorizationDomain {
     dirvers.tear tear = new tear();
     PageObject.loginPage loginPage = new loginPage();
 
-    @Ignore
     @Test
     @Parameters({"user", "pass"})
     public void check(String user, String pass){
