@@ -19,7 +19,6 @@ public class checkAuthorizationWithRemember {
     PageObject.loginPage loginPage = new loginPage();
     tapePage tapePage = new tapePage();
 
-    @Ignore
     @Test
     @Parameters({"user", "pass"})
     public void check(String user, String pass){
