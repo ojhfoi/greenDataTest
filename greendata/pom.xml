@@ -82,7 +82,7 @@
                     <systemPropertyVariables/>
                     <suiteXmlFiles>
                         <!--suppress UnresolvedMavenProperty -->
-                        <suiteXmlFile>${project.build.directory}/XML/${env.myxml}</suiteXmlFile>
+                        <suiteXmlFile>${project.build.directory}/src/test/resources/testNg.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.6/aspectjweaver-1.9.6.jar"
