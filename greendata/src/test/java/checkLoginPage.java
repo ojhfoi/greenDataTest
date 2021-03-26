@@ -16,7 +16,6 @@ public class checkLoginPage {
     tear tear = new tear();
     loginPage loginPage = new loginPage();
 
-    @Ignore
     @Test
     @Parameters({"user", "pass"})
     public void check(String user, String pass){
